@@ -1,1 +1,3 @@
-console.log('Файл index.js');
+import moduleFunc from './module1';
+
+moduleFunc('Иван');
