@@ -6,10 +6,10 @@ const conf = {
         path: path.resolve(__dirname, 'dist'),
         filename : 'main.js',
         publicPath: 'dist/'
+    },
+    devServer: {
+        overlay: true
     }
-    // devServer: {
-    //     contentBase: './dist'
-    // }
 }
 
 module.exports = conf;
