@@ -1,5 +1,6 @@
 const path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const conf = {
     entry: './src/index.js',
@@ -9,6 +10,7 @@ const conf = {
         publicPath: 'dist/'
     },
     devServer: {
+        contentBase: path.join(__dirname, "dist"),
         overlay: true
     },
     module: {
@@ -36,6 +38,9 @@ const conf = {
     },
     plugins: [
         new ExtractTextPlugin("styles.css"),
+        new HtmlWebpackPlugin({
+            template: './src/index.html'
+        })
     ]
 }
 
